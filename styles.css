@@ -1,0 +1,159 @@
+:root {
+  --degradado-principal: linear-gradient(135deg, #a8e6cf, #64c892);
+  --degradado-secundario: linear-gradient(135deg, #64c892, #81c784);
+  --color-texto: #333;
+  --color-header: linear-gradient(135deg, #64c892, #388e3c);
+  --color-footer: linear-gradient(135deg, #2a8c5b, #1b5e20);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background: var(--degradado-principal);
+  color: var(--color-texto);
+}
+
+header {
+  background: var(--color-header);
+  padding: 1em 0;
+  text-align: center;
+}
+
+.contenedor {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5em;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.logo img {
+  display: block;
+  margin: 0 auto;
+  width: 40px; /* Ajusta el tamaño según prefieras */
+  height: auto;
+  margin-bottom: -27px; /* Ajusta este valor para la posición */
+  margin-right: 220px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+nav li {
+  margin: 0 1em;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+section.ofertas {
+  text-align: center;
+  padding: 2em 0;
+  background: var(--degradado-secundario);
+  color: white;
+}
+
+.banner img {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 20px;
+}
+
+.banner p {
+  margin-top: 1em;
+  font-size: 1.2em;
+}
+
+section.productos {
+  padding: 2em 0;
+  text-align: center;
+  background: var(--degradado-principal);
+}
+
+.lista-productos {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1em;
+}
+.producto img {
+  border-radius: 15px;
+}
+.producto {
+  background-color: white;
+  padding: 1em;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.5;
+}
+
+.producto:hover {
+  transform: scale(1.1);
+}
+
+.producto img {
+  width: 100%;
+  height: auto;
+}
+
+.producto h3 {
+  margin: 0.5em 0;
+}
+
+.producto p {
+  margin: 0.5em 0;
+}
+
+footer {
+  background: var(--color-footer);
+  color: white;
+  text-align: center;
+  padding: 1em 0;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .contenedor {
+    flex-direction: column;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav li {
+    margin: 0.5em 0;
+  }
+}
